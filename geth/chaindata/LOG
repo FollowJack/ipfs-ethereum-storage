@@ -102,3 +102,17 @@
 15:47:18.867191 table@remove removed @18
 15:47:18.867255 table@remove removed @15
 15:47:18.867351 table@remove removed @14
+=============== Nov 1, 2017 (CET) ===============
+11:07:32.784805 memdb@flush N·204898 S·31MiB
+11:07:33.296285 memdb@flush created L0@29 N·204898 S·8MiB "\x00\x00\x89..Ch\xf5,v201185":"\xff\xfd\x9e..\x1f\x84\xde,v27020"
+11:07:33.297369 version@stat F·[1 1] S·8MiB[8MiB 794B] Sc·[0.25 0.00]
+11:07:33.297822 memdb@flush committed F·1 T·510.210523ms
+11:07:33.306489 journal@remove removed @25
+11:38:00.553997 table@compaction L0·1 -> L1·1 S·8MiB Q·209547
+11:38:00.635927 table@build created L1@30 N·39358 S·2MiB "\x00\x00\x89..Ch\xf5,v201185":"h\x00\x00..L\x14|,v30238"
+11:38:00.682826 table@build created L1@31 N·30513 S·2MiB "h\x00\x00..\x14|t,v30235":"h\x00\x00..\x0e\x1f\x98,v203145"
+11:38:00.741538 table@build created L1@32 N·26466 S·1MiB "h\x00\x00..\x1f\x98t,v203142":"\xff\xfd\x9e..\x1f\x84\xde,v27020"
+11:38:00.741594 version@stat F·[0 3] S·5MiB[0B 5MiB] Sc·[0.00 0.06]
+11:38:00.742084 table@compaction committed F+1 S-2MiB Ke·0 D·108578 T·187.850698ms
+11:38:00.744308 table@remove removed @29
+11:38:00.745377 table@remove removed @27
