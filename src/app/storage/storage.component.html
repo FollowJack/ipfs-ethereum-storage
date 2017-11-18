@@ -1,0 +1,42 @@
+<mat-list class="mat-list" role="list">
+  <h3 class="mat-subheader" mat-subheader="">Accounts</h3>
+  <mat-list-item class="mat-list-item mat-2-line" *ngFor="let account of ethereumService.accounts" role="listitem">
+    <div class="mat-list-item-content">
+      <div class="mat-list-item-ripple mat-ripple" mat-ripple=""></div>
+      <mat-icon class="mat-icon mat-list-icon material-icons"
+                mat-list-icon="" role="img" aria-hidden="true">account_balance_wallet
+      </mat-icon>
+      <div class="mat-list-text">
+        <h4 class="mat-line" mat-line="">{{account.name}}</h4>
+        <p>{{account.balance}} Ether</p>
+      </div>
+    </div>
+  </mat-list-item>
+</mat-list>
+
+<mat-form-field class="example-full-width">
+  <input matInput placeholder="Url of Image" [(ngModel)]="urlToStore">
+</mat-form-field>
+
+<button mat-raised-button (click)="onStoreContent()">Store</button>
+
+<br>
+<br>
+
+<mat-card class="example-card" *ngIf="storedObject">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Stored image in IPFS and hash in Ethereum</mat-card-title>
+    <mat-card-subtitle>Stored successfully</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="{{storedObject.url}}" alt="">
+  <mat-card-content>
+    <p>
+      IPFS Hash: {{storedObject.hash}}<br>
+      File size: {{storedObject.size}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>Download</button>
+  </mat-card-actions>
+</mat-card>
